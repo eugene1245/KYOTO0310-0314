@@ -1,1 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0310 KYOTO TOUR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --mint: #59FFE3;
+            --choco: #4B2C20;
+        }
 
+        body {
+            font-family: 'Dongle', sans-serif;
+            background-color: var(--mint);
+            /* 초코칩 패턴 */
+            background-image: radial-gradient(var(--choco) 2px, transparent 0);
+            background-size: 40px 40px;
+            color: var(--choco);
+            margin: 0;
+            padding: 20px;
+            /* 글씨 극대화 */
+            font-size: 38pt;
+            line-height: 0.85;
+        }
+
+        .page-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .page {
+            background: rgba(255, 255, 255, 0.95);
+            border: 10px solid var(--choco);
+            border-radius: 50px;
+            padding: 50px;
+            box-shadow: 20px 20px 0px var(--choco);
+            min-height: 1200px; /* 인쇄시 1페이지 분량 느낌 */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-title {
+            font-size: 80pt;
+            text-align: center;
+            border-bottom: 12px solid var(--choco);
+            margin-bottom: 40px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .day-block {
+            margin-bottom: 50px;
+        }
+
+        .day-header {
+            font-size: 65pt;
+            font-weight: 700;
+            background: var(--choco);
+            color: var(--mint);
+            display: inline-block;
+            padding: 0 25px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .plan-box {
+            border-left: 10px solid var(--choco);
+            padding-left: 25px;
+            margin-bottom: 30px;
+        }
+
+        .plan-label {
+            font-weight: 700;
+            font-size: 36pt;
+            text-decoration: underline;
+            text-underline-offset: 8px;
+            color: #1A1A1A;
+        }
+
+        .plan-content {
+            margin-top: 10px;
+            word-break: keep-all;
+        }
+
+        .info-box {
+            background: var(--choco);
+            color: var(--mint);
+            padding: 25px;
+            border-radius: 30px;
+            margin-top: auto;
+            font-size: 32pt;
+            text-align: center;
+        }
+
+        .alert-text {
+            color: #FF5252;
+            font-weight: 700;
+        }
+
+        /* 인쇄 설정 */
+        @media print {
+            body { background: white; background-image: none; padding: 0; }
+            .page { page-break-after: always; box-shadow: none; border-width: 6px; margin-bottom: 0; }
+            .page-container { gap: 0; }
+        }
+
+        /* 폰 화면 대응 */
+        @media (max-width: 768px) {
+            body { font-size: 30pt; padding: 10px; }
+            .main-title { font-size: 55pt; }
+            .day-header { font-size: 45pt; }
+            .page { padding: 30px; min-height: auto; }
+            .plan-label { font-size: 30pt; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        
+        <!-- 1쪽: 앞면 (Day 1, 2) -->
+        <div class="page">
+            <div class="main-title">0310 KYOTO TOUR</div>
+            
+            <div class="day-block">
+                <div class="day-header">DAY 1</div>
+                <div class="plan-box">
+                    <div class="plan-label">PLAN A 풍경 루트</div>
+                    <div class="plan-content">니시키시장 후미야우동 칸센도모나카 가츠쿠라</div>
+                </div>
+                <div class="plan-box">
+                    <div class="plan-label">PLAN B 먹방 루트</div>
+                    <div class="plan-content">멘야이노이치 라멘 SOT커피 하카타모츠나베</div>
+                </div>
+            </div>
+
+            <div class="day-block">
+                <div class="day-header">DAY 2</div>
+                <div class="plan-box">
+                    <div class="plan-label">PLAN A 아라시야마</div>
+                    <div class="plan-content">아라비카커피 리락쿠마카페 사가미 후후노유</div>
+                </div>
+                <div class="plan-box">
+                    <div class="plan-label">PLAN B 카모강 피크닉</div>
+                    <div class="plan-content">Wife Husband 야마모토멘조우 Totaro</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                준비물: 편한 신발 보조배터리 동전지갑
+            </div>
+        </div>
+
+        <!-- 2쪽: 뒷면 (Day 3, 4) -->
+        <div class="page">
+            <div class="day-block">
+                <div class="day-header">DAY 3</div>
+                <div class="plan-box">
+                    <div class="plan-label">PLAN A 기온/청수사</div>
+                    <div class="plan-content">소우스케 푸몬안 나나야 키치키치오므라이스</div>
+                </div>
+                <div class="plan-box">
+                    <div class="plan-label">PLAN B 전통 감성</div>
+                    <div class="plan-content">오멘냉우동 츠지리마차 카메하메하 코요테</div>
+                </div>
+            </div>
+
+            <div class="day-block">
+                <div class="day-header">DAY 4</div>
+                <div class="plan-box">
+                    <div class="plan-label">PLAN A 시내 마무리</div>
+                    <div class="plan-content">타카세가와산책 위켄더스커피 잇푸도라멘</div>
+                </div>
+                <div class="plan-box">
+                    <div class="plan-label">PLAN B 마지막 쇼핑</div>
+                    <div class="plan-content">니시키시장 재방문 드럭스토어 면세쇼핑</div>
+                </div>
+            </div>
+
+            <div class="info-box" style="background: #FF5252; color: white;">
+                필독: <span class="alert-text" style="color: white; text-decoration: underline;">오므라이스랑 우동</span> 예약 다시 확인!
+            </div>
+
+            <div style="text-align: center; margin-top: auto; font-size: 24pt; opacity: 0.6; padding-top: 40px;">
+                MINT CHOCO KYOTO GUIDE 0311-0314
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
