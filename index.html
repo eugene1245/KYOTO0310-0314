@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>0310 KYOTO TOUR</title>
+    <title>=￣ω￣=교토=￣ω￣=</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,186 +12,379 @@
         :root {
             --mint: #59FFE3;
             --choco: #4B2C20;
+            --white-glass: rgba(255, 255, 255, 0.98);
         }
 
         body {
             font-family: 'Dongle', sans-serif;
             background-color: var(--mint);
-            /* 초코칩 패턴 */
-            background-image: radial-gradient(var(--choco) 2px, transparent 0);
-            background-size: 40px 40px;
+            background-image: radial-gradient(var(--choco) 1.5px, transparent 0);
+            background-size: 60px 60px;
             color: var(--choco);
             margin: 0;
-            padding: 20px;
-            /* 글씨 극대화 */
-            font-size: 38pt;
+            padding: 0;
+            /* 어머니를 위한 왕 큰 글씨 */
+            font-size: 42pt;
             line-height: 0.85;
-        }
-
-        .page-container {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-        }
-
-        .page {
-            background: rgba(255, 255, 255, 0.95);
-            border: 10px solid var(--choco);
-            border-radius: 50px;
-            padding: 50px;
-            box-shadow: 20px 20px 0px var(--choco);
-            min-height: 1200px; /* 인쇄시 1페이지 분량 느낌 */
-            display: flex;
-            flex-direction: column;
-        }
-
-        .main-title {
-            font-size: 80pt;
-            text-align: center;
-            border-bottom: 12px solid var(--choco);
-            margin-bottom: 40px;
-            font-weight: 700;
-            line-height: 1;
-        }
-
-        .day-block {
-            margin-bottom: 50px;
-        }
-
-        .day-header {
-            font-size: 65pt;
-            font-weight: 700;
-            background: var(--choco);
-            color: var(--mint);
-            display: inline-block;
-            padding: 0 25px;
-            border-radius: 20px;
-            margin-bottom: 20px;
-        }
-
-        .plan-box {
-            border-left: 10px solid var(--choco);
-            padding-left: 25px;
-            margin-bottom: 30px;
-        }
-
-        .plan-label {
-            font-weight: 700;
-            font-size: 36pt;
-            text-decoration: underline;
-            text-underline-offset: 8px;
-            color: #1A1A1A;
-        }
-
-        .plan-content {
-            margin-top: 10px;
             word-break: keep-all;
         }
 
-        .info-box {
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 15px;
+        }
+
+        .main-title {
+            font-size: 85pt;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 40px;
+            line-height: 1;
+            background: white;
+            border: 10px solid var(--choco);
+            border-radius: 60px;
+            padding: 20px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-card {
+            background: var(--white-glass);
+            border: 7px solid var(--choco);
+            border-radius: 60px;
+            padding: 40px;
+            margin-bottom: 50px;
+            box-shadow: none;
+        }
+
+        .supplies-box {
             background: var(--choco);
             color: var(--mint);
-            padding: 25px;
-            border-radius: 30px;
-            margin-top: auto;
+            border-radius: 40px;
+            padding: 30px;
+            margin-bottom: 50px;
             font-size: 32pt;
             text-align: center;
         }
 
-        .alert-text {
-            color: #FF5252;
+        .day-badge {
+            font-size: 90pt;
             font-weight: 700;
+            display: block;
+            text-align: center;
+            margin-bottom: 15px;
+            border-bottom: 15px solid var(--choco);
+            line-height: 0.6;
         }
 
-        /* 인쇄 설정 */
-        @media print {
-            body { background: white; background-image: none; padding: 0; }
-            .page { page-break-after: always; box-shadow: none; border-width: 6px; margin-bottom: 0; }
-            .page-container { gap: 0; }
+        .plan-header {
+            background: var(--choco);
+            color: white;
+            display: block;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 25px;
+            font-size: 36pt;
+            margin: 30px 0 20px 0;
         }
 
-        /* 폰 화면 대응 */
-        @media (max-width: 768px) {
-            body { font-size: 30pt; padding: 10px; }
-            .main-title { font-size: 55pt; }
-            .day-header { font-size: 45pt; }
-            .page { padding: 30px; min-height: auto; }
-            .plan-label { font-size: 30pt; }
+        .plan-item {
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        .time-slot {
+            font-weight: 700;
+            color: #FF1493;
+            font-size: 36pt;
+            display: block;
+        }
+
+        .item-name {
+            font-size: 48pt;
+            font-weight: 700;
+            color: #000;
+            display: block;
+        }
+
+        .location-tip {
+            font-size: 28pt;
+            color: #555;
+            line-height: 1;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .move-guide {
+            background: #E0F2F1;
+            border-radius: 20px;
+            padding: 5px 20px;
+            font-size: 24pt;
+            color: #00796B;
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        .divider {
+            height: 15px;
+            background-color: var(--choco);
+            border-radius: 999px;
+            margin: 45px 0;
+            opacity: 0.15;
+        }
+
+        .alert-box {
+            background-color: #FF5252;
+            color: white;
+            padding: 15px;
+            border-radius: 20px;
+            font-size: 30pt;
+            font-weight: 700;
+            margin-top: 20px;
+            line-height: 1;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 50px 0 120px 0;
+            font-size: 32pt;
+            background: white;
+            border-top: 8px solid var(--choco);
+        }
+
+        @media (max-width: 600px) {
+            body { font-size: 34pt; }
+            .main-title { font-size: 60pt; }
+            .day-badge { font-size: 80pt; }
+            .item-name { font-size: 42pt; }
+            .location-tip { font-size: 26pt; }
+            .alert-box { font-size: 24pt; }
         }
     </style>
 </head>
 <body>
 
-    <div class="page-container">
+    <div class="container">
         
-        <!-- 1쪽: 앞면 (Day 1, 2) -->
-        <div class="page">
-            <div class="main-title">0310 KYOTO TOUR</div>
+        <div class="main-title">=￣ω￣=교토=￣ω￣=</div>
+
+        <!-- 준비물 -->
+        <div class="supplies-box">
+            🎒 <strong>준비물 리스트</strong> 🎒<br>
+            여권 보조배터리 동전지갑 이코카카드<br>
+            돼지코 포켓와이파이 상비약 산책용가방
+        </div>
+
+        <!-- DAY 1: 오사카 -->
+        <div class="section-card">
+            <span class="day-badge">DAY 1</span>
             
-            <div class="day-block">
-                <div class="day-header">DAY 1</div>
-                <div class="plan-box">
-                    <div class="plan-label">PLAN A 풍경 루트</div>
-                    <div class="plan-content">니시키시장 후미야우동 칸센도모나카 가츠쿠라</div>
-                </div>
-                <div class="plan-box">
-                    <div class="plan-label">PLAN B 먹방 루트</div>
-                    <div class="plan-content">멘야이노이치 라멘 SOT커피 하카타모츠나베</div>
-                </div>
+            <div class="plan-header">📍 3/10 오사카 먹방 & 교토입성</div>
+            
+            <div class="plan-item">
+                <span class="time-slot">13:05</span>
+                <span class="item-name">🛬 간사이 공항 착륙</span>
+                <span class="location-tip">입국 심사 & 수하물 찾기</span>
             </div>
 
-            <div class="day-block">
-                <div class="day-header">DAY 2</div>
-                <div class="plan-box">
-                    <div class="plan-label">PLAN A 아라시야마</div>
-                    <div class="plan-content">아라비카커피 리락쿠마카페 사가미 후후노유</div>
-                </div>
-                <div class="plan-box">
-                    <div class="plan-label">PLAN B 카모강 피크닉</div>
-                    <div class="plan-content">Wife Husband 야마모토멘조우 Totaro</div>
-                </div>
+            <div class="plan-item">
+                <span class="time-slot">15:30</span>
+                <span class="item-name">🛍️ 오사카 시내 쇼핑</span>
+                <span class="location-tip">난바/도톤보리 굿즈 구경</span>
+                <span class="move-guide">공항급행 타고 난바역으로 고고!</span>
             </div>
 
-            <div class="info-box">
-                준비물: 편한 신발 보조배터리 동전지갑
+            <div class="plan-item">
+                <span class="time-slot">18:00</span>
+                <span class="item-name">🍛 사카이 Fukuya (후쿠야)</span>
+                <span class="location-tip">유지니 픽! 여기서 인생 카레저녁</span>
+                <span class="move-guide">사카이 오초히가시 이동</span>
+            </div>
+
+            <div class="plan-item">
+                <span class="time-slot">21:00</span>
+                <span class="item-name">🚆 교토 이동 & 체크인</span>
+                <span class="location-tip">교토역 숙소 도착해서 짐풀기</span>
+            </div>
+
+            <div class="alert-box text-center">
+                📢 야마모토 멘조우 예약하기!<br>
+                (낼모레 우동 먹으려면 지금 체크!)
             </div>
         </div>
 
-        <!-- 2쪽: 뒷면 (Day 3, 4) -->
-        <div class="page">
-            <div class="day-block">
-                <div class="day-header">DAY 3</div>
-                <div class="plan-box">
-                    <div class="plan-label">PLAN A 기온/청수사</div>
-                    <div class="plan-content">소우스케 푸몬안 나나야 키치키치오므라이스</div>
-                </div>
-                <div class="plan-box">
-                    <div class="plan-label">PLAN B 전통 감성</div>
-                    <div class="plan-content">오멘냉우동 츠지리마차 카메하메하 코요테</div>
-                </div>
+        <!-- DAY 2: 아라시야마 -->
+        <div class="section-card">
+            <span class="day-badge">DAY 2</span>
+            
+            <div class="plan-header">📍 3/11 아라시야마 풀코스</div>
+            
+            <div class="plan-item">
+                <span class="time-slot">09:30</span>
+                <span class="item-name">🚃 아라시야마 출발</span>
+                <span class="move-guide">JR 타고 사가아라시야마역</span>
             </div>
 
-            <div class="day-block">
-                <div class="day-header">DAY 4</div>
-                <div class="plan-box">
-                    <div class="plan-label">PLAN A 시내 마무리</div>
-                    <div class="plan-content">타카세가와산책 위켄더스커피 잇푸도라멘</div>
-                </div>
-                <div class="plan-box">
-                    <div class="plan-label">PLAN B 마지막 쇼핑</div>
-                    <div class="plan-content">니시키시장 재방문 드럭스토어 면세쇼핑</div>
-                </div>
+            <div class="plan-item">
+                <span class="time-slot">10:00</span>
+                <span class="item-name">☕ 아라비카 교토 & 리락쿠마</span>
+                <span class="location-tip">응커피 마시고 리락쿠마 카페 구경</span>
             </div>
 
-            <div class="info-box" style="background: #FF5252; color: white;">
-                필독: <span class="alert-text" style="color: white; text-decoration: underline;">오므라이스랑 우동</span> 예약 다시 확인!
+            <div class="plan-item">
+                <span class="time-slot">12:30</span>
+                <span class="item-name">🍣 사가미 점심식사</span>
+                <span class="location-tip">메인거리에서 정갈한 일식</span>
             </div>
 
-            <div style="text-align: center; margin-top: auto; font-size: 24pt; opacity: 0.6; padding-top: 40px;">
-                MINT CHOCO KYOTO GUIDE 0311-0314
+            <div class="plan-item">
+                <span class="time-slot">14:30</span>
+                <span class="item-name">🍔 어핏 버거 (UPIT)</span>
+                <span class="location-tip">강가 산책하며 수제버거 한입</span>
             </div>
+
+            <div class="plan-item">
+                <span class="time-slot">16:30</span>
+                <span class="item-name">♨️ 후후노유 온천</span>
+                <span class="location-tip">노천탕에서 힐링 타임</span>
+            </div>
+
+            <div class="plan-item">
+                <span class="time-slot">19:30</span>
+                <span class="item-name">🥩 가츠쿠라 돈카츠</span>
+                <span class="location-tip">시조 근처에서 바삭한 저녁식사</span>
+            </div>
+        </div>
+
+        <!-- DAY 3: 청수사 & 기온 -->
+        <div class="section-card">
+            <span class="day-badge">DAY 3</span>
+            
+            <div class="plan-header">📍 3/12 기온 감성 산책</div>
+
+            <div class="plan-item">
+                <span class="time-slot">10:00</span>
+                <span class="item-name">🥯 코요테 (Coyote)</span>
+                <span class="location-tip">분위기 좋은 곳에서 브런치!</span>
+            </div>
+            
+            <div class="plan-item">
+                <span class="time-slot">11:30</span>
+                <span class="item-name">🏯 기요미즈데라 (청수사)</span>
+                <span class="location-tip">니넨자카 산넨자카 천천히 걷기</span>
+            </div>
+
+            <div class="plan-item">
+                <span class="time-slot">13:00</span>
+                <span class="item-name">🍱 소우스케 점심</span>
+                <span class="location-tip">청수사 근처에서 먹는 든든한 밥</span>
+            </div>
+
+            <div class="plan-item">
+                <span class="time-slot">15:00</span>
+                <span class="item-name">🍦 나나야 & 푸몬안 & 츠지리</span>
+                <span class="location-tip">녹차 젤라또랑 당고 싹쓸이!</span>
+            </div>
+
+            <div class="plan-item">
+                <span class="time-slot">17:00</span>
+                <span class="item-name">🍘 칸센도 모나카</span>
+                <span class="location-tip">간식으로 전통 모나카 냠냠</span>
+            </div>
+
+            <div class="plan-item">
+                <span class="time-slot">19:00</span>
+                <span class="item-name">🍜 멘야 이노이치</span>
+                <span class="location-tip">미슐랭 라멘으로 기분좋은 저녁</span>
+            </div>
+        </div>
+
+        <!-- DAY 4: 북부 피크닉 -->
+        <div class="section-card">
+            <span class="day-badge">DAY 4</span>
+            
+            <div class="plan-header">📍 3/13 카모강 북부 여행</div>
+            
+            <div class="plan-item">
+                <span class="time-slot">10:00</span>
+                <span class="item-name">🧺 Wife & Husband</span>
+                <span class="location-tip">카모강변에서 피크닉 세트 대여</span>
+            </div>
+
+            <div class="plan-item">
+                <span class="time-slot">12:30</span>
+                <span class="item-name">🍜 야마모토 멘조우</span>
+                <span class="location-tip">예약 성공한 인생 우동 먹기</span>
+            </div>
+
+            <div class="plan-item">
+                <span class="time-slot">14:30</span>
+                <span class="item-name">🍵 Totaro & SOT 커피</span>
+                <span class="location-tip">여유로운 티타임 즐기기</span>
+            </div>
+
+            <div class="plan-item">
+                <span class="time-slot">16:30</span>
+                <span class="item-name">🌸 타카세가와 & 위켄더스</span>
+                <span class="location-tip">수로 산책 후 골목 카페 가기</span>
+            </div>
+
+            <div class="plan-item">
+                <span class="time-slot">19:30</span>
+                <span class="item-name">🥘 하카타 모츠나베</span>
+                <span class="location-tip">교토 마지막 밤은 뜨끈한 전골</span>
+            </div>
+
+            <div class="plan-item">
+                <span class="time-slot">21:30</span>
+                <span class="item-name">🍸 카메하메하</span>
+                <span class="location-tip">분위기 있게 하루 마무리 한잔</span>
+            </div>
+        </div>
+
+        <!-- DAY 5: 마무리 -->
+        <div class="section-card">
+            <span class="day-badge">DAY 5</span>
+            
+            <div class="plan-header">📍 3/14 쇼핑 & 공항이동</div>
+            
+            <div class="plan-item">
+                <span class="time-slot">10:00</span>
+                <span class="item-name">🍱 니시키 시장 & 후미야</span>
+                <span class="location-tip">시장 털기 하구 따뜻한 우동 식사</span>
+            </div>
+
+            <div class="plan-item">
+                <span class="time-slot">13:00</span>
+                <span class="item-name">🍜 오멘 / 잇푸도 라멘</span>
+                <span class="location-tip">냉우동 혹은 라멘으로 막식사</span>
+            </div>
+
+            <div class="plan-item">
+                <span class="time-slot">15:45</span>
+                <span class="item-name">🚆 교토역 출발</span>
+                <span class="move-guide">하루카 열차 타고 공항으로!</span>
+            </div>
+
+            <div class="plan-item">
+                <span class="time-slot">17:30</span>
+                <span class="item-name">🛂 간사이 공항 도착</span>
+                <span class="location-tip">체크인 하고 면세점 쇼핑</span>
+            </div>
+
+            <div class="plan-item">
+                <span class="time-slot">19:55</span>
+                <span class="item-name">✈️ 비행기 이륙</span>
+                <span class="location-tip">즐거웠던 여행 끝! 한국으로</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            🍢 03.10 - 03.14 🍢<br>
+            유지나 엄마랑 행복 가득 채워와!<br>
+            조심히 잘 다녀와야해 멍멍!
         </div>
 
     </div>
